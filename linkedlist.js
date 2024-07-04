@@ -222,6 +222,22 @@ class linkedlist {
     }
   }
 
+  //getting element by index
+
+  indexing(no) {
+    let counter = 0;
+    let temp = this.head;
+
+    while (temp) {
+      if (counter === no) {
+        return temp;
+      }
+      counter++;
+      temp = temp.next;
+    }
+    return null;
+  }
+
   showall() {
     console.log("head", this.head);
     console.log("tail", this.tail);
@@ -232,11 +248,10 @@ let link = new linkedlist(100);
 
 link.push(200);
 link.push(300);
-link.shift();
-link.showall();
+console.log(link.set(1, 50));
 
 //////////////////////////////////////////////////////////  USING SIMPLE FUNCTION
-
+/*
 function createNode(value) {
   return {
     value: value,
@@ -303,3 +318,4 @@ function pop(head) {
 }
 
 console.log(pop(linkelist));
+*/
