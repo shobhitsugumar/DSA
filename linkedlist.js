@@ -239,23 +239,35 @@ class linkedlist {
   }
 
   insert(index, value) {
+    let newnode = new Node(value);
+
+    if (index === 0) {
+      newnode.next = this.head;
+      this.head = newnode;
+      return this.head;
+    }
     let count = 0;
     let temp = this.head;
     let prev = this.head;
 
     while (temp) {
       if (count === index) {
-        let newnode = new Node(value);
         prev.next = newnode;
         newnode.next = temp;
+        return this.head;
       } else {
         count++;
         prev = temp;
         temp = prev.next;
       }
     }
-    console.log(head);
-    return head;
+    if (count === index) {
+      prev.next = newnode;
+      this.tail = newnode;
+      return this.head;
+    } else {
+      return "out of bound";
+    }
   }
 
   showall() {
@@ -267,8 +279,8 @@ class linkedlist {
 let link = new linkedlist(100);
 
 link.push(200);
-link.push(300);
-console.log(link.insert(1, 40));
+
+console.log(link.insert(3, 40));
 
 //////////////////////////////////////////////////////////  USING SIMPLE FUNCTION
 /*
