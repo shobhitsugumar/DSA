@@ -238,6 +238,26 @@ class linkedlist {
     return null;
   }
 
+  insert(index, value) {
+    let count = 0;
+    let temp = this.head;
+    let prev = this.head;
+
+    while (temp) {
+      if (count === index) {
+        let newnode = new Node(value);
+        prev.next = newnode;
+        newnode.next = temp;
+      } else {
+        count++;
+        prev = temp;
+        temp = prev.next;
+      }
+    }
+    console.log(head);
+    return head;
+  }
+
   showall() {
     console.log("head", this.head);
     console.log("tail", this.tail);
@@ -248,7 +268,7 @@ let link = new linkedlist(100);
 
 link.push(200);
 link.push(300);
-console.log(link.set(1, 50));
+console.log(link.insert(1, 40));
 
 //////////////////////////////////////////////////////////  USING SIMPLE FUNCTION
 /*
