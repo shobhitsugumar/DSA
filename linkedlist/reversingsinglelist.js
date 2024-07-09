@@ -30,3 +30,21 @@ function reverse(head) {
 
 let list1 = createlinkedlist([1, 2, 3, 4]);
 console.log(reverse(list1));
+
+///////////////////////////////////////////////////////  using recursion /////////////////////////////////////////////////////////////////////////
+/*
+function reverse(head) {
+  if (head === null || head.next === null) {
+    return head;
+  }
+
+  let newhead = reverse(head.next);
+  let front = head.next;
+  front.next = head;
+  head.next = null;
+  return newhead;
+}
+
+let list1 = createlinkedlist([1, 2, 3, 4]);
+console.log(reverse(list1));
+*/
