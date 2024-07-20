@@ -38,6 +38,7 @@ function oddeven(head) {
     odd.next = odd.next.next;
     even.next = even.next.next;
 
+    //this is to traverse the odd and even in the list
     odd = odd.next;
     even = even.next;
   }
