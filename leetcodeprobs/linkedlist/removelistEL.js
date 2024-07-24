@@ -1,6 +1,6 @@
 //problem : https://leetcode.com/problems/remove-linked-list-elements/description/
 
-//soluiton
+//solution
 
 function removelistElement(head, val) {
   if (val === null) return null;

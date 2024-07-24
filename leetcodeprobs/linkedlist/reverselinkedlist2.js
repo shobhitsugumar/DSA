@@ -14,7 +14,7 @@ best waytodo 2. is using in place linked list reverse algorithm we take a dummyn
 */
 
 //solution 2
-
+//usin in place linked list algorithm
 function reverseelinkedlist(head, left, right) {
   if (!head || left === right) {
     return head;
