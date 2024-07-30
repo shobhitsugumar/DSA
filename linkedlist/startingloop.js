@@ -14,7 +14,7 @@ function startingloop(head) {
     if (slow === fast) {
       slow = head;
       while (slow !== fast) {
-        slow = slow.head;
+        slow = slow.next;
         fast = fast.next;
       }
       return slow;

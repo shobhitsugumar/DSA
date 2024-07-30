@@ -28,4 +28,5 @@ function intersection(head1, head2) {
       temp2 = head1;
     }
   }
+  return t1;
 }
