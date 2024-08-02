@@ -8,7 +8,7 @@ function fixedsize(nums, k) {
   maxsum = sum;
 
   for (let i = k; i < nums.length; i++) {
-    sum += nums[k] - nums[i - k];
+    sum = sum + nums[k] - nums[i - k];
     maxsum = Math.max(sum, maxsum);
   }
   return maxsum;

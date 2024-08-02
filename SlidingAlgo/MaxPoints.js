@@ -12,6 +12,8 @@ solution : we use sliding window algo ,here we take lsum and rsum intialie we ad
            and  add to find the max sum 
 */
 
+//this is fixed Size window technique
+
 function Maxpoints(nums, k) {
   let lsum = 0;
   let rsum = 0;
