@@ -31,6 +31,7 @@ function Substrings3Char(num) {
       count[num[left]]--;
       left++;
     }
+    right++;
   }
   return result;
 }
