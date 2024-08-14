@@ -11,39 +11,29 @@
 
 */
 
-///this function is used to find the node which should point to null
-function findone(head, k) {
-  let temp = head;
-  let count = 1;
+var rotateRight = function (head, k) {
+  if (head === null || head.next === null) return head;
 
-  while (temp !== null) {
-    if (count === k) {
-      return temp;
-    }
-    count++;
-    temp = temp.next;
-  }
-  return head;
-}
-
-function rotatelist(head, k) {
-  let tail = head;
   let length = 1;
-
-  while (temp.next !== null) {
+  let current = head;
+  while (current.next) {
+    current = current.next;
     length++;
-    tail = tail.next;
   }
-  if (k % length === 0) {
-    return head;
-  }
+
+  current.next = head;
+
   k = k % length;
+  let stepsToNewHead = length - k;
 
-  nullnode = findone(head, length - k);
+  let newTail = head;
+  for (let i = 0; i < stepsToNewHead - 1; i++) {
+    newTail = newTail.next;
+  }
 
-  head = nullnode.next;
-  nullnode.next = null;
+  let newHead = newTail.next;
 
-  return head;
-}
-//
+  newTail.next = null;
+
+  return newHead;
+};
