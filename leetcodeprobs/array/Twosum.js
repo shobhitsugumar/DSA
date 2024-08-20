@@ -1,22 +1,27 @@
 //problem : https://leetcode.com/problems/two-sum/submissions/1339085093/
 
+/*Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]*/
+
 /*
-solution : take a empty object then sub the numbet by target and check if it is there in the array if not add that in the object 
-
-
+solution : solution : take a hashmap then sub the number by target and check if it is there in the array if not add that in the object
+                             Time Complexity : O(n)
+                             Space Complexity : O(n) 
+           
 Time Complexity : O(n)
 Space Complexity : O(n)
  */
 
-function twoSum(nums, target) {
-  let numMap = {};
-  for (let i = 0; i < nums.length; i++) {
-    const value = target - nums[i];
-    if (value in numMap) {
-      return [numMap[value], i];
+function twosum(arr, target) {
+  let map = new Map();
+  for (let i = 0; i < arr.length; i++) {
+    if (map.has(target - arr[i])) {
+      return [i, map.get(target - arr[i])];
+    } else {
+      map.set(arr[i], i);
     }
-    //if it is not present we store the value 2 and the its index
-    numMap[nums[i]] = i;
   }
-  return null;
 }
+const res = twosum([3, 2, 4], 6);
+console.log(res);
