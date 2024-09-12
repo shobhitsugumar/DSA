@@ -120,8 +120,8 @@ public class Main{
 
 //same in js 
 
-function majorityElement(v) {
-    let n = v.length; // size of the array
+function majorityElement(arr) {
+    let n = arr.length; // size of the array
 
     let cnt1 = 0, cnt2 = 0; // counts
     let el1 = -Infinity; // element 1
@@ -129,16 +129,16 @@ function majorityElement(v) {
 
     // applying the Extended Boyer Moore's Voting Algorithm:
     for (let i = 0; i < n; i++) {
-        if (cnt1 === 0 && el2 !== v[i]) {
+        if (cnt1 === 0 && el2 !== arr[i]) {
             cnt1 = 1;
-            el1 = v[i];
+            el1 = arr[i];
         }
-        else if (cnt2 === 0 && el1 !== v[i]) {
+        else if (cnt2 === 0 && el1 !== arr[i]) {
             cnt2 = 1;
-            el2 = v[i];
+            el2 = arr[i];
         }
-        else if (v[i] === el1) cnt1++;
-        else if (v[i] === el2) cnt2++;
+        else if (arr[i] === el1) cnt1++;
+        else if (arr[i] === el2) cnt2++;
         else {
             cnt1--, cnt2--;
         }
