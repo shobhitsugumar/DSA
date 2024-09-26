@@ -48,32 +48,40 @@ public class mergeinterval{
 
 
 //in js 
-function mergeOverlappingIntervals(arr) {
-  const n = arr.length; // size of the array
+function mergerinterval(arr){
+    let ans = []
+    for(let i = 0 ;i<arr.length;i++){
+        let start = arr[i][0]
+        let end = arr[i][1]
 
-  //sort the given intervals:
-  arr.sort((a, b) => a[0] - b[0]);
-
-  const ans = [];
-
-  for (let i = 0; i < n; i++) { // select an interval:
-    let start = arr[i][0];
-    let end = arr[i][1];
-
-    //Skip all the merged intervals:
-    if (ans.length && end <= ans[ans.length - 1][1]) {
-      continue;
+        if(ans.length && end<=ans[ans.length-1][1]){continue}
+        for(let j = i+1;j<arr.length;j++){
+            if(arr[j][0]<=arr[i][1]){
+                end = Math.max(end,arr[j][1])
+            }else{
+                break
+            }
+        }
+        ans.push([start,end])
     }
 
-    //check the rest of the intervals:
-    for (let j = i + 1; j < n; j++) {
-      if (arr[j][0] <= end) {
-        end = Math.max(end, arr[j][1]);
-      } else {
-        break;
-      }
+}
+
+//optimal solution in js 
+
+function mergeinterval(arr){
+    //here also we sort the array 
+    arr.sort((a,b)=>a[0]-b[0])
+    let ans = [arr[0]]
+    for(let i=1;i<arr.length;i++){
+        let last = ans[ans.length-1];
+        let cur = arr[i]
+        if(cur[0]<=last[1]){
+            last[1]=Math.max(last[1],cur[1])
+        }
+        else{
+            ans.push(cur)
+        }
     }
-    ans.push([start, end]);
-  }
-  return ans;
+    return ans 
 }
