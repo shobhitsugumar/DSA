@@ -24,7 +24,7 @@ function knapsack(arr, W) {
   let finalvalue = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    if (currentweight + arr[i].value <= W) {
+    if (currentweight + arr[i].weight <= W) {
       currentweight += arr[i].weight;
       finalvalue += arr[i].value;
     } else {
