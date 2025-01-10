@@ -1,6 +1,6 @@
 /*
-problem :to find the longest diameter : 104. Maximum Depth of Binary Tree
-         https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
+problem :to find the longest diameter : 543. Diameter of Binary Tree
+         https://leetcode.com/problems/diameter-of-binary-tree/description/
 
          Diameter : The diameter of a binary tree is the longest path between any two nodes in the tree.
                  
