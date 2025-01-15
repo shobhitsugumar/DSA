@@ -17,10 +17,10 @@ var verticalTraversal = function (root) {
   let queue = [];
   let map = new Map();
 
-  queue.push([root, [0, 0]]);
+  queue.push([root, 0, 0]);
 
   while (queue.length > 0) {
-    let [currentnode, [x, y]] = queue.shift();
+    let [currentnode, x, y] = queue.shift();
 
     if (!map.has(x)) {
       map.set(x, new Map());
