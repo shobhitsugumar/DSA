@@ -1,5 +1,5 @@
 /**
- * Morris inorder traversal :
+ * Morris inorder traversal : using thread traversal
  *       in inorder what are all the case :
  *                    case 1 : that if the left node is null we print the current val and return to the parent like ( left ,root ,right )
  *                    case 2 : after we print the left we move up inorder we use recursion here we cant so what we do is  we connect the
