@@ -1,6 +1,6 @@
 ///morris preorder Traversal
 /**
- * solution is using thread we solve this problem
+ * solution : we solve this problem using thread connection
  */
 
 var inorderTraversal = function (root) {
