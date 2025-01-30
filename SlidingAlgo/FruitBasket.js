@@ -46,6 +46,7 @@ function Fruitbasket(n) {
     }
     right++;
   }
+  return maxlen;
 }
 
 //optimized solution
