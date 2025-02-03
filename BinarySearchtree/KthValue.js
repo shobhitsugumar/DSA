@@ -1,8 +1,8 @@
-//problem : https://leetcode.com/problems/validate-binary-search-tree/description/
+//problem :https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/
 
 /**
  *
- * 98. Validate Binary Search Tree
+ *230. Kth Smallest Element in a BST
  */
 
 //solution : we use inorder traversal and we put that in the arr
