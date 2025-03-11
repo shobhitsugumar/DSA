@@ -37,8 +37,8 @@ var rightSideView = function (root) {
 
   let ans = [];
 
-  for (let [key, value] of sortedval) {
-    ans.push(map.get(key));
+  for (let [key, value] of map) {
+    ans.push(value);
   }
   return ans;
 };
