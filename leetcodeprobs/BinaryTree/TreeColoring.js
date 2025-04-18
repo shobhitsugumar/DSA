@@ -65,7 +65,7 @@ var btreeGameWinningMove = function (root, n, x) {
   }
 };
 
-// in java
+// in javaa
 /*
 class Solution {
     public boolean btreeGameWinningMove(TreeNode root, int n, int x) {
